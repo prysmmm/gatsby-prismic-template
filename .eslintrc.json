@@ -1,0 +1,376 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "prettier",
+    "jsx-a11y",
+    "import",
+    "react-hooks",
+    "unused-imports"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "airbnb"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx",
+          ".d.ts"
+        ],
+        "moduleDirectory": [
+          "node_modules",
+          "src/"
+        ]
+      },
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": "./tsconfig.json"
+      }
+    },
+    "import/parsers": {
+      "@typescript-eslint/parser": [
+        ".ts",
+        ".tsx"
+      ]
+    },
+    "react": {
+      "version": "detect"
+    }
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/__tests__/*"
+      ],
+      "env": {
+        "jest": true
+      }
+    }
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": true
+      }
+    ],
+    "curly": [
+      "error",
+      "all"
+    ],
+    "quotes": [
+      "warn",
+      "backtick"
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "unused-imports/no-unused-imports-ts": "error",
+    "unused-imports/no-unused-vars-ts": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "array-bracket-spacing": "off",
+    // Handled by Prettier
+    "arrow-body-style": "off",
+    // Handled by Prettier
+    "arrow-parens": "off",
+    // Handled by Prettier
+    "arrow-spacing": "off",
+    // Handled by Prettier
+    "class-methods-use-this": "off",
+    // We may want to implement dummy methods when extending interfaces
+    "comma-dangle": "off",
+    // Handled by Prettier
+    "comma-spacing": "off",
+    // Handled by Prettier
+    "brace-style": "off",
+    // Handled by Prettier
+    "function-call-argument-newline": "off",
+    // Handled by prettier
+    "function-paren-newline": "off",
+    // Handled by Prettier
+    "implicit-arrow-linebreak": "off",
+    // Handled by Prettier
+    "import/export": "off",
+    // Useless
+    "import/extensions": "off",
+    // Useless
+    "import/no-extraneous-dependencies": "off",
+    // It's a good rule, but unfortunately incompatible with monorepos
+    "import/no-unresolved": "off",
+    // Handled by TS
+    "import/prefer-default-export": "off",
+    // Subjective nonsense
+    "indent": "off",
+    // Handled by Prettier
+    "keyword-spacing": "off",
+    // Handled by Prettier
+    "lines-between-class-members": "off",
+    // Handled by Prettier
+    "max-len": "off",
+    // Handled by Prettier
+    "newline-per-chained-call": "off",
+    // Handled by Prettier
+    "no-continue": "off",
+    // Subjective nonsense
+    "no-else-return": "off",
+    // Subjective nonsense
+    "no-empty-function": "off",
+    // Noisy
+    "no-empty-pattern": "off",
+    // Noisy
+    "no-extra-semi": "off",
+    // Handled by Prettier
+    "no-multi-spaces": "off",
+    // Handled by Prettier
+    "no-multiple-empty-lines": "off",
+    // Handled by Prettier,
+    "no-plusplus": "off",
+    // Useless
+    "no-redeclare": "off",
+    // Prevents function overloads in TS
+    "no-restricted-syntax": "off",
+    // Subjective nonsense
+    "no-shadow": "off",
+    // Buggy
+    "no-trailing-spaces": "off",
+    // Handled by Prettier
+    "no-return-await": "off",
+    // Preference (no "error") and misplaced (https://stackoverflow.com/a/44806230 -> "off")
+    "no-undef": "off",
+    // Handled by TS
+    "no-underscore-dangle": "off",
+    // Useless
+    "no-unused-vars": "off",
+    // Handled by TS
+    "no-use-before-define": "off",
+    // Handled by TS
+    "nonblock-statement-body-position": "off",
+    // Handled by Prettier
+    "object-curly-newline": "off",
+    // Handled by Prettier
+    "object-curly-spacing": "off",
+    // Handled by Prettier
+    "operator-linebreak": "off",
+    // Handled by Prettier
+    "padded-blocks": "off",
+    // Handled by Prettier
+    "semi": "off",
+    // Handled by Prettier
+    "space-before-function-paren": "off",
+    // Handled by Prettier
+    "space-infix-ops": "off",
+    // Handled by Prettier
+    "space-unary-ops": "off",
+    // Handled by Prettier
+    "spaced-comment": "off",
+    // Useless
+    "template-curly-spacing": "off",
+    // Handled by Prettier
+
+    "default-case": "warn",
+    // Preference (-> no "error")
+    "default-param-last": "warn",
+    // Preference (-> no "error")
+    "dot-notation": "warn",
+    // Auto-fixable
+    "eol-last": "warn",
+    // Auto-fixable
+    "import/first": "warn",
+    // it's OK for imports to not be first when mocking with Jest (-> "warn")
+    "import/newline-after-import": "warn",
+    // Auto-fixable
+    "import/no-cycle": "off",
+    // it's OK to have cycles when importing types (-> "warn"), but it would be better to refactor code (-> no "off")
+    "import/no-useless-path-segments": "warn",
+    // Auto-fixable
+    "no-confusing-arrow": "warn",
+    // Auto-fixable
+    "no-empty": "warn",
+    // Not an error
+    "no-extra-boolean-cast": "warn",
+    // Auto-fixable
+    "no-lonely-if": "warn",
+    // Auto-fixable
+    "no-unneeded-ternary": "warn",
+    // Auto-fixable
+    "no-useless-return": "warn",
+    // Auto-fixable
+    "object-shorthand": "warn",
+    // Auto-fixable
+    "one-var": "warn",
+    // Auto-fixable
+    "one-var-declaration-per-line": "warn",
+    // Auto-fixable
+    "operator-assignment": "warn",
+    // Auto-fixable
+    "prefer-arrow-callback": "warn",
+    // Auto-fixable,
+    "prefer-const": "warn",
+    // Auto-fixable,
+    "prefer-destructuring": "warn",
+    // Preference (-> no "error"),
+    "prefer-object-spread": "warn",
+    // Auto-fixable
+    "prefer-template": "warn",
+    // Auto-fixable
+    "radix": "warn",
+    // It's generally OK not to put a radix (-> "warn") but it's nice to be explicit (-> no "off")
+    "yoda": "warn",
+    // Auto-fixable
+
+    // React rules
+    "jsx-quotes": "off",
+    // Handled by Prettier
+    "react/jsx-closing-tag-location": "off",
+    // Handled by Prettier
+    "react/jsx-filename-extension": "off",
+    // Doesn't work with tsx
+    "react/jsx-indent": "off",
+    // Handled by Prettier
+    "react/jsx-indent-props": "off",
+    // Handled by Prettier
+    "react/jsx-no-bind": "off",
+    // Subjective nonsense
+    "react/jsx-no-useless-fragment": "off",
+    // Subjective nonsense,
+    "react/jsx-one-expression-per-line": "off",
+    // Handled by Prettier,
+    "react/jsx-props-no-multi-spaces": "off",
+    // Handled by Prettier
+    "react/jsx-props-no-spreading": "off",
+    // The idea is good, but it triggers too many errors in the codebase to be activated right now
+    "react/jsx-tag-spacing": "off",
+    // Handled by Prettier
+    "react/jsx-wrap-multilines": "off",
+    // Handled by Prettier
+    "react/no-array-index-key": "warn",
+    // Doesn't fit all cases
+    "react/no-unstable-nested-components": "off",
+    // The idea is good, but the rule triggers for render functions as well,
+    "react/prop-types": "off",
+    // Handled by TS,
+    "react/require-default-props": "off",
+    // Doesn't work well with TS
+    "react/jsx-curly-newline": "off",
+    //Handled by Prettier
+    "react/no-unescaped-entities": "off",
+    // Doesn't work with tsx
+
+    "react/destructuring-assignment": "warn",
+    // Preference (-> no "error")
+    "react/function-component-definition": "warn",
+    // Auto-fixable,
+    "react/jsx-curly-brace-presence": "warn",
+    // Auto-fixable,
+    "react/no-unused-prop-types": "warn",
+    // Does not justify an error
+    "react/self-closing-comp": "warn",
+    // Auto-fixable
+
+    "prefer-regex-literals": "off",
+    "@typescript-eslint/no-redeclare": "error",
+    // alternative to `no-redeclare` that supports TS
+    "no-restricted-globals": [
+      "error",
+      "fit",
+      "fdescribe"
+    ],
+    "import/order": [
+      "error",
+      {
+        "alphabetize": {
+          "order": "ignore",
+          "caseInsensitive": true
+        },
+        "groups": [
+          [
+            "builtin",
+            "external"
+          ],
+          [
+            "internal"
+          ],
+          [
+            "parent",
+            "sibling",
+            "index",
+            "type"
+          ]
+        ],
+        "pathGroups": [
+          {
+            "pattern": "**/{clients,clients/}**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "**/{config,config/}**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "**/{domain,domain/}**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "**/{components,components/}**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "**/{graphql,graphql/}**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "**/{hooks,hooks/}**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "**/{repositories,repositories/}**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "**/{state,state/}**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "**/{tracking,tracking/}**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "**/{types,types/}**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "**/{utils,utils/}**",
+            "group": "internal",
+            "position": "after"
+          }
+        ],
+        "newlines-between": "always"
+      }
+    ]
+  }
+}

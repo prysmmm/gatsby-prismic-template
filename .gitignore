@@ -1,0 +1,29 @@
+# Node
+node_modules
+
+# Gatsby
+.cache
+public
+
+# JetBrains
+.idea
+
+# Env
+.env.*
+
+# macOS
+.DS_Store
+
+# .ts
+tsconfig.tsbuildinfo
+
+# storybook
+dist
+storybook-static
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# tests
+test-results
