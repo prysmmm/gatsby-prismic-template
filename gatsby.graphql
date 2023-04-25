@@ -3331,25 +3331,21 @@ input SitePluginSortInput {
 
 type SiteSiteMetadata {
   description: String
-  siteUrl: String
   title: String
 }
 
 input SiteSiteMetadataFieldSelector {
   description: FieldSelectorEnum
-  siteUrl: FieldSelectorEnum
   title: FieldSelectorEnum
 }
 
 input SiteSiteMetadataFilterInput {
   description: StringQueryOperatorInput
-  siteUrl: StringQueryOperatorInput
   title: StringQueryOperatorInput
 }
 
 input SiteSiteMetadataSortInput {
   description: SortOrderEnum
-  siteUrl: SortOrderEnum
   title: SortOrderEnum
 }
 

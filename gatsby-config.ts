@@ -61,7 +61,7 @@ const config: GatsbyConfig = {
         },
       },
     },
-    `gatsby-source-prismic-hedda`,
+    `gatsby-source-prismic-plugin`,
     {
       resolve: `gatsby-source-prismic`,
       options: {

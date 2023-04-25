@@ -47,7 +47,7 @@ export const Layout = forwardRef<HTMLDivElement, Props>(
     };
 
     return (
-      <Box ref={ref} as="section" bg="black" {...rest}>
+      <Box ref={ref} as="section" h="100vh" bg="blue.75" {...rest}>
         <RemoveScroll enabled={isNavOpen}>
           <MobileNavigation isNavOpen={isNavOpen} homeLink={data.homeLink} />
         </RemoveScroll>

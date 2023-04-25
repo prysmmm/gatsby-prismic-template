@@ -33,7 +33,7 @@
     "gatsby-plugin-prismic-previews": "^5.2.10",
     "gatsby-plugin-react-svg": "^3.3.0",
     "gatsby-plugin-robots-txt": "^1.8.0",
-    "gatsby-plugin-sharp": "^5.7.0",
+    "gatsby-plugin-sharp": "^5.9.0",
     "gatsby-plugin-sitemap": "^6.7.0",
     "gatsby-plugin-typescript": "^5.4.0",
     "gatsby-source-filesystem": "^5.7.0",
@@ -43,7 +43,8 @@
     "react": "^18.2.0",
     "react-children-utilities": "^2.8.0",
     "react-countdown": "^2.3.5",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "sharp": "^0.32.0"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^17.4.2",

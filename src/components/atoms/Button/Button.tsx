@@ -7,7 +7,7 @@ import { Icons } from '@/config';
 import { Icon } from '../Icon';
 
 export type ButtonSize = `sm` | `md`;
-export type ButtonVariant = `menu` | `cookies`;
+export type ButtonVariant = ``;
 
 export interface Props extends Omit<ButtonProps, `leftIcon` | `rightIcon`> {
   size?: ButtonSize;

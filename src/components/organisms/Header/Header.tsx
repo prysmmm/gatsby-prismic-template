@@ -3,15 +3,7 @@ import { useScroll, useTransform } from 'framer-motion';
 
 import { _Link } from '@/domain/entities';
 
-import {
-  Box,
-  Container,
-  Flex,
-  FlexProps,
-  Link,
-  LogoLower,
-  MotionBox,
-} from '@/components/atoms';
+import { Box, Container, Flex, FlexProps, MotionBox } from '@/components/atoms';
 import { MenuDots, Navigation } from '@/components/molecules';
 
 const maxScrollY = 100;
@@ -51,7 +43,6 @@ export const Header = forwardRef<HTMLDivElement, Props>(
         top={0}
         position="sticky"
         zIndex="11"
-        bg="rgba(0, 0, 0, 0.4)"
         borderBottomWidth={1}
         borderBottomStyle="solid"
         borderBottomColor="black"
@@ -73,21 +64,6 @@ export const Header = forwardRef<HTMLDivElement, Props>(
               pl={5}
             >
               <MenuDots isNavOpen={isNavOpen} onClick={onNavClick} />
-            </Box>
-            <Box
-              as="figure"
-              order={[2, null, null, 1]}
-              alignItems="center"
-              justifyContent="center"
-              mr={5}
-            >
-              <Link
-                to={homeLink.path}
-                title={homeLink.label}
-                display="inline-block"
-              >
-                <LogoLower width="100" height="28.5" />
-              </Link>
             </Box>
             <Navigation navLinks={navLinks} order={2} />
           </Flex>

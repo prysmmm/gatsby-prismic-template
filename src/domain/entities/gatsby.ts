@@ -3478,25 +3478,21 @@ export type GatsbySitePluginSortInput = {
 export type GatsbySiteSiteMetadata = {
   __typename?: 'SiteSiteMetadata';
   description?: Maybe<Scalars['String']>;
-  siteUrl?: Maybe<Scalars['String']>;
   title?: Maybe<Scalars['String']>;
 };
 
 export type GatsbySiteSiteMetadataFieldSelector = {
   description?: InputMaybe<GatsbyFieldSelectorEnum>;
-  siteUrl?: InputMaybe<GatsbyFieldSelectorEnum>;
   title?: InputMaybe<GatsbyFieldSelectorEnum>;
 };
 
 export type GatsbySiteSiteMetadataFilterInput = {
   description?: InputMaybe<GatsbyStringQueryOperatorInput>;
-  siteUrl?: InputMaybe<GatsbyStringQueryOperatorInput>;
   title?: InputMaybe<GatsbyStringQueryOperatorInput>;
 };
 
 export type GatsbySiteSiteMetadataSortInput = {
   description?: InputMaybe<GatsbySortOrderEnum>;
-  siteUrl?: InputMaybe<GatsbySortOrderEnum>;
   title?: InputMaybe<GatsbySortOrderEnum>;
 };
 
