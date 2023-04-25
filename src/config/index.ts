@@ -1,1 +1,2 @@
-export * from './I18n'
+export * from './Company';
+export * from './Icon';

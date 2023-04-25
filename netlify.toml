@@ -2,18 +2,8 @@
 package = "@netlify/plugin-gatsby"
 
 [build.environment]
-NODE_VERSION = "19.2.0"
+NODE_VERSION = "18.13"
 
 [context.main]
 [context.main.environment]
 GATSBY_IS_PROD = "true"
-
-[context.deploy-preview]
-command = "yarn noIndex"
-[context.deploy-preview.environment]
-GATSBY_IS_PROD = "false"
-
-[context.branch-deploy]
-command = "yarn noIndex"
-[context.branch-deploy.environment]
-GATSBY_IS_PROD = "false"

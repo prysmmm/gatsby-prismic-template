@@ -19,17 +19,8 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx",
-          ".d.ts"
-        ],
-        "moduleDirectory": [
-          "node_modules",
-          "src/"
-        ]
+        "extensions": [".js", ".jsx", ".ts", ".tsx", ".d.ts"],
+        "moduleDirectory": ["node_modules", "src/"]
       },
       "typescript": {
         "alwaysTryTypes": true,
@@ -37,10 +28,7 @@
       }
     },
     "import/parsers": {
-      "@typescript-eslint/parser": [
-        ".ts",
-        ".tsx"
-      ]
+      "@typescript-eslint/parser": [".ts", ".tsx"]
     },
     "react": {
       "version": "detect"
@@ -48,9 +36,7 @@
   },
   "overrides": [
     {
-      "files": [
-        "**/__tests__/*"
-      ],
+      "files": ["**/__tests__/*"],
       "env": {
         "jest": true
       }
@@ -63,14 +49,8 @@
         "semi": true
       }
     ],
-    "curly": [
-      "error",
-      "all"
-    ],
-    "quotes": [
-      "warn",
-      "backtick"
-    ],
+    "curly": ["error", "all"],
+    "quotes": ["warn", "backtick"],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "unused-imports/no-unused-imports-ts": "error",
@@ -180,6 +160,8 @@
     "spaced-comment": "off",
     // Useless
     "template-curly-spacing": "off",
+    // Useless
+    "array-callback-return": "off",
     // Handled by Prettier
 
     "default-case": "warn",
@@ -231,8 +213,6 @@
     "radix": "warn",
     // It's generally OK not to put a radix (-> "warn") but it's nice to be explicit (-> no "off")
     "yoda": "warn",
-    // Auto-fixable
-
     // React rules
     "jsx-quotes": "off",
     // Handled by Prettier
@@ -285,11 +265,7 @@
     "prefer-regex-literals": "off",
     "@typescript-eslint/no-redeclare": "error",
     // alternative to `no-redeclare` that supports TS
-    "no-restricted-globals": [
-      "error",
-      "fit",
-      "fdescribe"
-    ],
+    "no-restricted-globals": ["error", "fit", "fdescribe"],
     "import/order": [
       "error",
       {
@@ -298,19 +274,9 @@
           "caseInsensitive": true
         },
         "groups": [
-          [
-            "builtin",
-            "external"
-          ],
-          [
-            "internal"
-          ],
-          [
-            "parent",
-            "sibling",
-            "index",
-            "type"
-          ]
+          ["builtin", "external"],
+          ["internal"],
+          ["parent", "sibling", "index", "type"]
         ],
         "pathGroups": [
           {

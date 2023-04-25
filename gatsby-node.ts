@@ -1,5 +1,4 @@
 import { GatsbyNode } from 'gatsby';
-import readingTime from 'reading-time';
 import path from 'path';
 import { exec } from 'child_process';
 
@@ -29,18 +28,4 @@ export const onCreateWebpackConfig: GatsbyNode[`onCreateWebpackConfig`] = ({
       },
     },
   });
-};
-
-export const onCreateNode: GatsbyNode[`onCreateNode`] = ({ node, actions }) => {
-  const { createNodeField } = actions;
-  if (node.internal.type === `PrismicBlogPost`) {
-    const data = node.data as {
-      body: {
-        text: string;
-      }[];
-    };
-    const content = data.body.reduce((acc, item) => `${acc} ${item.text}`, ``);
-    const infos = readingTime(content);
-    createNodeField({ node, name: `readingTime`, value: infos });
-  }
 };

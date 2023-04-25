@@ -1,6 +1,8 @@
 # Node
 node_modules
 
+src/gatsby-types.d.ts
+
 # Gatsby
 .cache
 public
@@ -24,6 +26,3 @@ storybook-static
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# tests
-test-results

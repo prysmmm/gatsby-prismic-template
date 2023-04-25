@@ -12,3 +12,7 @@ generates:
       - "typescript-react-apollo"
     config:
       typesPrefix: "Gatsby"
+  ./gatsby.graphql:
+    schema: "http://localhost:8000/___graphql"
+    plugins:
+      - "schema-ast"

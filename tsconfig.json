@@ -63,14 +63,6 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true
   },
-  "include": [
-    "plugins",
-    "src",
-    "gatsby-browser.tsx",
-    "gatsby-config.ts",
-    "gatsby-node.ts",
-    "gatsby-ssr.tsx",
-    "vite.config.ts"
-  ],
+  "include": ["plugins", "src", "gatsby-config.ts", "gatsby-node.ts"],
   "exclude": [".cache", "node_modules", "public"]
 }
